@@ -16,6 +16,95 @@ body {
 	-webkit-text-fill-color: transparent;
 } */
 
+@font-face {
+	font-family: 'Inter';
+	src: url('../fonts/Inter/static/Inter-Bold.ttf');
+}
+
+/* .principal-name{
+
+
+	background-clip: text;
+	font-size: 10rem !important;
+	font-weight: 800 !important;
+	background: -webkit-linear-gradient(#007cf0,#ff0080); 
+	background:-webkit-linear-gradient(#ffffff,#ff003b);
+	-webkit-background-clip: text;
+	font-family: Inter;
+	-webkit-text-fill-color: transparent;
+	letter-spacing: -.06em;
+
+}
+.intro-position span{
+	font-size: 2.5rem !important;
+	font-weight: 800 !important;
+	font-family: Inter;
+}
+
+.intro-greeting{
+	font-size: 2rem !important;
+}
+
+.intro-button{
+	border-radius: 8px;
+} */
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* Estilos para dispositivos móviles en orientación vertical */
+    .principal-name {
+        background-clip: text;
+        font-size: 10rem !important;
+        font-weight: 800 !important;
+        background: -webkit-linear-gradient(#ffffff, #ff003b);
+        -webkit-background-clip: text;
+        font-family: Inter;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -.06em;
+    }
+    
+    .intro-position span {
+        font-size: 2.5rem !important;
+        font-weight: 800 !important;
+        font-family: Inter;
+    }
+    
+    .intro-greeting {
+        font-size: 2rem !important;
+    }
+    
+    .intro-button {
+        border-radius: 8px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* Estilos para la versión web */
+	.principal-name{
+		background-clip: text;
+		font-size: 13rem !important;
+		font-weight: 800 !important;
+		/* background: -webkit-linear-gradient(#007cf0,#ff0080); */
+		background:-webkit-linear-gradient(#ffffff,#ff003b);
+		-webkit-background-clip: text;
+		font-family: Inter;
+		-webkit-text-fill-color: transparent;
+		letter-spacing: -.06em;
+	
+	}
+	.intro-position span{
+		font-size: 3.9rem !important;
+		font-weight: 800 !important;
+		font-family: Inter;
+	}
+	
+	.intro-greeting{
+		font-size: 3rem !important;
+	}
+	
+	.intro-button{
+		border-radius: 8px;
+	}
+}
 
 article,
 aside,
@@ -227,11 +316,11 @@ th {
 	padding: 0;
 }
 
-/** 
+/**
  * ===================================================================
  * 02. basic/base setup styles - (_basic.scss)
  *
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 html {
 	font-size: 62.5%;
@@ -262,7 +351,7 @@ button {
 
 /**
  * Media - (_basic.scss)
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 img,
 video {
@@ -272,7 +361,7 @@ video {
 
 /**
  * Typography resets - (_basic.scss)
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 div,
 dl,
@@ -337,7 +426,7 @@ li {
 
 /**
  * links - (_basic.scss)
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 a {
 	text-decoration: none;
@@ -350,7 +439,7 @@ a img {
 
 /**
  * inputs - (_basic.scss)
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 fieldset {
 	margin: 0;
@@ -372,11 +461,11 @@ textarea {
 	appearance: none;
 }
 
-/** 
+/**
  * ===================================================================
  * 03. grid - (_grid.scss)
  *
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 .row {
 	width: 94%;
@@ -472,7 +561,7 @@ textarea {
 
 /**
  * small screens - (_grid.scss)
- * --------------------------------------------------------------- 
+ * ---------------------------------------------------------------
  */
 @media screen and (max-width:1024px) {
 	.row .row {
@@ -488,7 +577,7 @@ textarea {
 
 /**
  * tablets - (_grid.scss)
- * --------------------------------------------------------------- 
+ * ---------------------------------------------------------------
  */
 @media screen and (max-width:768px) {
 	.row {
@@ -536,7 +625,7 @@ textarea {
 
 /**
  * large mobile devices - (_grid.scss)
- * --------------------------------------------------------------- 
+ * ---------------------------------------------------------------
  */
 @media screen and (max-width:600px) {
 	.row {
@@ -573,7 +662,7 @@ textarea {
 
 /**
  * small mobile devices - (_grid.scss)
- * --------------------------------------------------------------- 
+ * ---------------------------------------------------------------
  */
 @media screen and (max-width:400px) {
 	.row .row {
@@ -598,11 +687,11 @@ textarea {
 
 }
 
-/** 
+/**
  * ===================================================================
  * block grids - (_grid.scss)
  *
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 [class*="block-"]:before,
 [class*="block-"]:after {
@@ -631,7 +720,7 @@ textarea {
 }
 
 /**
- * Clearing for block grid columns. Allow columns with 
+ * Clearing for block grid columns. Allow columns with
  * different heights to align properly.
  */
 .block-1-6 .bgrid:nth-child(6n+1),
@@ -643,7 +732,7 @@ textarea {
 
 /**
  * small screens - (_grid.scss)
- * --------------------------------------------------------------- 
+ * ---------------------------------------------------------------
  */
 @media screen and (max-width:1024px) {
 	.block-s-1-6 .bgrid {
@@ -682,7 +771,7 @@ textarea {
 
 /**
  * tablets - (_grid.scss)
- * --------------------------------------------------------------- 
+ * ---------------------------------------------------------------
  */
 @media screen and (max-width:768px) {
 	.block-tab-1-6 .bgrid {
@@ -721,7 +810,7 @@ textarea {
 
 /**
  * large mobile devices - (_grid.scss)
- * --------------------------------------------------------------- 
+ * ---------------------------------------------------------------
  */
 @media screen and (max-width:600px) {
 	.block-mob-1-6 .bgrid {
@@ -760,7 +849,7 @@ textarea {
 
 /**
  * stack on small mobile devices - (_grid.scss)
- * --------------------------------------------------------------- 
+ * ---------------------------------------------------------------
  */
 @media screen and (max-width:400px) {
 	.stack .bgrid {
@@ -773,11 +862,11 @@ textarea {
 
 }
 
-/** 
+/**
  * ===================================================================
  * 04. MISC  - (_grid.scss)
  *
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 
 /**
@@ -794,7 +883,7 @@ textarea {
 }
 
 /**
- * Misc Helper Styles 
+ * Misc Helper Styles
  */
 .hide {
 	display: none;
