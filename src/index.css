@@ -1,6 +1,5 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
@@ -8,61 +7,103 @@
   background-color: #242424;
 
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-ExtraBold.ttf') format('truetype');
 }
 
-body {
-  margin: 0;
+@font-face {
+  font-family: 'Amsterdam';
+  src: url('../fonts/AmsterdamThr.ttf') format('truetype');
+}
+
+.container {
+  background-image: url('../src/assets/img/home.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.game-title{
+  font-family: Montserrat;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.game-title span{
+  color:red
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.content {
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.centered-text {
+  text-align: center;
+  color: white;
+  font-size: 65px;
+  font-family: Montserrat;
+  letter-spacing: -2px;
+  margin-top: -1px;
+  -webkit-animation: fluido 10s ease-in-out infinite;
+  animation: fluido 10s ease-in-out infinite;
+  background: linear-gradient(-45deg, #FFFFFF, #4B6681, #901E1D, #E4B84E);    
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo {
+  width: 170px;
+  height: 170px;
+  display: block;
+  margin-top: -50px !important;
+  margin: 0 auto; 
+}
+
+.logo-name {
+  font-size: 30px;
+  font-family: Amsterdam;
+  /* background-image: linear-gradient(20deg, #ffffff, #901E1D); */
+  /* background-clip: text; */
+  color:#fff;
+  /* z-index: 2;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent; */
+}
+
+.centered-text#span{
+  color:901E1D;
+
+}
+
+@keyframes fluido {
+0% {
+  background-position: 0 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0 50%;
+}
 }
